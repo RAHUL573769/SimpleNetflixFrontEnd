@@ -1,13 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import netflix from "../Images/netflix.jpg";
 const Header = () => {
   const menuItems = (
     <>
       <li>
         <Link to="/movies">Movie Items</Link>
       </li>
-
+      <li>
+        <Link to="/login">Login</Link>
+      </li>
       <li>
         <Link to="/dashboard">Click To Open Dashboard</Link>
       </li>
@@ -41,10 +43,11 @@ const Header = () => {
               {menuItems}
             </ul>
           </div>
-          <Link className="btn btn-ghost normal-case text-xl">daisyUI</Link>
+          <img className="w-28" src={netflix} alt="" />
+          <Link className="btn btn-ghost normal-case text-xl">Netflix</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{menuItems}</ul>
+          <ul className=" menu menu-horizontal px-1">{menuItems}</ul>
         </div>
         <label
           htmlFor="my-drawer-2"
